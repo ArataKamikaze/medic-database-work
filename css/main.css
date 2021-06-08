@@ -1,0 +1,38 @@
+.custom_blue{
+  color: #42C6FF !important;
+}
+.custom_blue_bg{
+  background-color: #42C6FF !important;
+}
+.custom_gray{
+  color: #9A9A9A !important;
+}
+.custom_gray_bg{
+  background-color: #9A9A9A !important;
+}
+.custom_white{
+  color: #FFFFFF !important;
+}
+.custom_white_bg{
+  background-color: #FFFFFF !important;
+}
+.custom_rounded{
+  border-radius:  15px;
+}
+.custom_rounded_top{
+  border-top-right-radius: 15px;
+  border-top-left-radius:  15px;
+}
+.custom_rounded_bottom{
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius:  15px;
+}
+.custom_border{
+  border-width: thin !important;
+  border-color: #9A9A9A !important;
+  border: solid;
+}
+.custom_padding_5{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
