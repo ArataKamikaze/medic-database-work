@@ -13,8 +13,48 @@
     <link rel="shortcut icon" href="img/logo.png">
 </head>
 <body>
+
+    <!-- conexão database -->
      <?php include( 'php/db.php'); ?>
-     <?php include( 'php/navbar.php'); ?>
-     <?php include( 'php/table.php'); ?>
+
+     <!-- navbar -->
+     <nav class="uk-navbar custom_blue_bg " uk-navbar="mode: click">
+       <div class="uk-navbar-center uk-container-expand">
+           <div class="uk-navbar-center-left">
+             <div>
+               <ul class="uk-navbar-nav">
+                 <li><a class="custom_white uk-text-bold custom_disabled">Home</a></li>
+                 <li><a class="custom_white" href="php/list.php?type=clientes">Clientes</a></li>
+                 <li><a class="custom_white" href="php/list.php?type=medicos">Médicos</a></li>
+               </ul>
+             </div>
+           </div>
+           <a href="" class="uk-navbar-item uk-logo">
+             <img src="img/logo.png" width="50px"alt="logo">
+           </a>
+           <div class="uk-navbar-center-right">
+             <div>
+               <ul class="uk-navbar-nav">
+                 <li><a class="custom_white" href="php/list.php?type=atendimentos">Atendimento</a></li>
+                 <li><a class="custom_white" href="php/list.php?type=planos">Planos de Saúde</a></li>
+               </ul>
+             </div>
+           </div>
+         </div>
+     </nav>
+
+     <!-- informações da pagina -->
+     <div class="uk-container uk-container-small uk-animation-fade">
+       <label for="table1">Consultas próximas:</label>
+     </div>
+     <?php include( 'php/tables/table.php'); ?>
+
+
+     <div class="uk-container uk-container-small uk-margin-small-top uk-animation-fade">
+       <label for="table2">Clientes com tratamento crônico, que possuem agendamento pendente:</label>
+     </div>
+     <?php include( 'php/tables/table.php'); ?>
+
+
 </body>
 </html>
