@@ -10,12 +10,15 @@
     <link rel="stylesheet" href="css/main.css"/>
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
+    <script src="js/chart.min.js" type="text/javascript"></script>
     <link rel="shortcut icon" href="img/logo.png">
 </head>
 <body>
-
     <!-- conexão database -->
-     <?php include( 'php/db.php'); ?>
+     <?php include( 'php/config/db.php'); ?>
+
+     <!-- checagem do tipo da página -->
+     <?php include( 'php/config/checktype.php'); ?>
 
      <!-- navbar -->
      <nav class="uk-navbar custom_blue_bg " uk-navbar="mode: click">
@@ -23,9 +26,9 @@
            <div class="uk-navbar-center-left">
              <div>
                <ul class="uk-navbar-nav">
-                 <li><a class="custom_white uk-text-bold custom_disabled">Home</a></li>
-                 <li><a class="custom_white" href="php/list.php?type=clientes">Clientes</a></li>
-                 <li><a class="custom_white" href="php/list.php?type=medicos">Médicos</a></li>
+                 <li><a class="custom_white" href="php/pages/list.php?type=clientes">Clientes</a></li>
+                 <li><a class="custom_white" href="php/pages/list.php?type=medicos">Médicos</a></li>
+                 <li><a class="custom_white" href="php/pages/list.php?type=funcionarios">Funcionários</a></li>
                </ul>
              </div>
            </div>
@@ -35,8 +38,9 @@
            <div class="uk-navbar-center-right">
              <div>
                <ul class="uk-navbar-nav">
-                 <li><a class="custom_white" href="php/list.php?type=atendimentos">Atendimento</a></li>
-                 <li><a class="custom_white" href="php/list.php?type=planos">Planos de Saúde</a></li>
+                 <li><a class="custom_white" href="php/pages/list.php?type=tratamentos">Tratamentos</a></li>
+                 <li><a class="custom_white" href="php/pages/list.php?type=atendimentos">Atendimento</a></li>
+                 <li><a class="custom_white" href="php/pages/list.php?type=planos">Planos de Saúde</a></li>
                </ul>
              </div>
            </div>
@@ -54,7 +58,5 @@
        <label for="table2">Clientes com tratamento crônico, que possuem agendamento pendente:</label>
      </div>
      <?php include( 'php/tables/table.php'); ?>
-
-
 </body>
 </html>

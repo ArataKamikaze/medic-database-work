@@ -1,5 +1,5 @@
 <?php
-$dsn = 'mysql:dbname=trabalhoDB;localhost';
+$dsn = 'mysql:dbname=hospital;localhost';
 $user = 'root';
 $password = 'root';
 
