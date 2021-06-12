@@ -9,12 +9,12 @@
     <thead>
       <?php
         switch ($type) {
-          case "Clientes":
+          case "clientes":
             echo "<tr >
                     <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Sexo</th>
                     <th>Telefone</th>
-                    <th>CPF</th>
-                    <th>E-mail</th>
                     <th>Detalhes</th>
                   </tr>";
             break;

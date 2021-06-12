@@ -15,7 +15,7 @@
     <?php if ($search != "") {?>
     <form id="search_form"class="uk-search uk-search-default uk-margin-small-left" action="" method="get">
         <button type="submit" class="uk-button uk-width-small uk-button-primary">Voltar</button>
-        <input type="hidden" name="type"    value="<?php echo $type; ?>">
+        <input type="hidden" name="type" value="<?php echo $type; ?>">
     </form>
     <?php } ?>
 </div>

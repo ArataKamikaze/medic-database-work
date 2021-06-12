@@ -5,13 +5,22 @@
 
       switch ($type) {
         case "clientes":
-          echo "<tr >
-                  <th>Nome</th>
-                  <th>Telefone</th>
-                  <th>CPF</th>
-                  <th>E-mail</th>
-                  <th>Detalhes</th>
-                </tr>";
+        $sql = 'call  lista_de_clientes('.($page-1).', "'.$search.'");';
+        foreach ($dbl->query($sql) as $row) {
+          $nome = $row['nome'];
+          $idade = $row['idade'];
+          $sexo = $row['sexo'];
+          $telefone = $row['numero_do_telefone'];
+          $cpf = $row['cpf'];
+
+          echo '<tr >
+            <td>'.$nome.'</td>
+            <td>'.$idade.'</td>
+            <td>'.$sexo.'</td>
+            <td>'.$telefone.'</td>
+            <td><a href="php/describe.php?id='.$cpf.'">Clique Aqui</a></td>
+          </tr>';
+        }
           break;
         case "medicos":
           echo "<tr>
