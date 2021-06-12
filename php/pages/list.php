@@ -5,5 +5,6 @@
     include("../config/checktype.php");
     include("../config/navbar.php");
     include("../blocks/check_navigation.php");
+    include("../blocks/search.php");
     include("../tables/table.php");
 ?>
