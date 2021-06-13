@@ -47,3 +47,6 @@
   padding-top: 5px !important;
   padding-bottom: 5px !important;
 }
+.custom_padding_bottom_5p{
+  padding-bottom: 5% !important;
+}

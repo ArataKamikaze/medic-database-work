@@ -1,7 +1,7 @@
 <?php
   switch ($type) {
     case 'clientes':
-      include('client_navigation.php');
+      include('../blocks/client_navigation.php');
       break;
     default:
       break;

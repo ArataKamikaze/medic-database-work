@@ -12,7 +12,7 @@
     <script type='text/javascript'>
       var ctx = document.getElementById('grafico_clientes_estado_civil2').getContext('2d');
       var grafico_clientes_estado_civil = new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
         data: {
             labels: ['Casado(a)', 'Divorciado(a)', 'Separado(a)', 'Solteiro(a)', 'Viuvo(a)'],
             datasets: [{

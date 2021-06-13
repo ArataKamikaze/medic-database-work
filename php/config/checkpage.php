@@ -1,6 +1,6 @@
 <?php
 
-  $sql =  'select obter_n_lista_de_clientes("") as num from dual;';
+  $sql =  'select obter_n_lista_de_clientes("'.$search.'") as num from dual;';
   foreach ($dbl->query($sql) as $row) {
       $pages = $row['num'];
   }

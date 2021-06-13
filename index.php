@@ -13,7 +13,7 @@
     <script src="js/chart.min.js" type="text/javascript"></script>
     <link rel="shortcut icon" href="img/logo.png">
 </head>
-<body>
+<body class="custom_padding_bottom_5p">
     <!-- conexão database -->
      <?php include( 'php/config/db.php'); ?>
 
@@ -57,6 +57,6 @@
      <div class="uk-container uk-container-small uk-margin-small-top uk-animation-fade">
        <label for="table2">Clientes com tratamento crônico, que possuem agendamento pendente:</label>
      </div>
-     <?php include( 'php/tables/table.php'); ?>
+     <?php include( 'php/tables/table_1.php'); ?>
 </body>
 </html>

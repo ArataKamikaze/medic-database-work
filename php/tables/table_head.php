@@ -21,8 +21,10 @@
           case "medicos":
             echo "<tr>
                     <th>Nome</th>
-                    <th>Especialização</th>
-                    <th>Cadastro</th>
+                    <th>Idade</th>
+                    <th>CRM</th>
+                    <th>Sexo</th>
+                    <th>Telefone</th>
                     <th>Detalhes</th>
                   </tr>";
             break;
@@ -38,16 +40,15 @@
           case "planos":
             echo "<tr >
                     <th>Nome</th>
-                    <th>Cadastro</th>
-                    <th>Tier</th>
                     <th>Detalhes</th>
                   </tr>";
             break;
           case "funcionarios":
             echo "<tr >
                     <th>Nome</th>
-                    <th>Cadastro</th>
-                    <th>Tier</th>
+                    <th>Cargo</th>
+                    <th>Data de Admissão</th>
+                    <th>sexo</th>
                     <th>Detalhes</th>
                   </tr>";
             break;
