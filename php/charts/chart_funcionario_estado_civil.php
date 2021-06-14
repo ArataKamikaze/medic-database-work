@@ -1,9 +1,9 @@
 <canvas id="grafico_clientes_estado_civil" width="300" height="200"></canvas>
 <?php
-      $sql = 'select estado_civil, count(*) as contagem from (select * from pessoa join cliente using(CPF)) as A group by estado_civil;';
+      $sql = 'call dados_funcionarios_estado_civil();';
       $i = 0;
       foreach ($dbl->query($sql) as $row) {
-        $estado_civil[$i] = $row['contagem'];
+        $estado_civil[$i] = $row['count(*)'];
         $i+=1;
       }
     echo "

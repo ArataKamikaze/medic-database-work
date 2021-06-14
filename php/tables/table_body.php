@@ -15,26 +15,25 @@
                 <td>'.$idade.'</td>
                 <td>'.$sexo.'</td>
                 <td>'.$telefone.'</td>
-                <td><a href="php/describe.php?id='.$cpf.'">Clique Aqui</a></td>
+                <td><a href="detail.php?type='.$type.'&id='.$cpf.'">Clique Aqui</a></td>
               </tr>';
             }
             break;
         case "medicos":
-            $sql = 'call  listar_medicos("'.$search.'");';
+            $sql = 'call  lista_de_medicos('.$page.', "'.$search.'");';
             foreach ($dbl->query($sql) as $row) {
               $nome = $row['nome'];
               $idade = $row['idade'];
+              $crm = $row['crm'];
               $sexo = $row['sexo'];
               $telefone = $row['numero_do_telefone'];
-              $crm = $row['crm'];
-              //$id_medico = $row['id_medico'];
               echo '<tr >
                 <td>'.$nome.'</td>
                 <td>'.$idade.'</td>
                 <td>'.$crm.'</td>
                 <td>'.$sexo.'</td>
                 <td>'.$telefone.'</td>
-                <td><a href="php/describe.php?id='.''/*$cpf*/.'">Clique Aqui</a></td>
+                <td><a href="detail.php?type='.$type.'&id='.$crm.'">Clique Aqui</a></td>
               </tr>';
             }
             break;
@@ -54,7 +53,7 @@
               $id = $row['plano_de_saude_id'];
               echo '<tr >
                 <td>'.$nome.'</td>
-                <td><a href="php/describe.php?id='.$id.'">Clique Aqui</a></td>
+                <td><a href="detail.php?id='.$id.'">Clique Aqui</a></td>
               </tr>';
             }
             break;
@@ -73,17 +72,25 @@
                 <td>'.$admissao.'</td>
                 <td>'.$sexo.'</td>
                 <td>'.$telefone.'</td>
-                <td><a href="php/describe.php?id='.$cpf.'">Clique Aqui</a></td>
+                <td><a href="detail.php?type='.$type.'&id='.$cpf.'">Clique Aqui</a></td>
               </tr>';
             }
             break;
         case "tratamentos":
-            echo "<tr >
-                    <th>Nome</th>
-                    <th>Cadastro</th>
-                    <th>Tier</th>
-                    <th>Detalhes</th>
-                  </tr>";
+            $sql = 'call lista_de_tratamentos('.$page.',"'.$search.'")';
+            foreach ($dbl->query($sql) as $row) {
+              $nome = $row['cliente_nome'];
+              $quant = $row['quant_de_atendimentos'];
+              $tipo_atendimento = $row['tipo_de_tratamento'];
+              $id_tratamento = $row['tratamento_id'];
+
+              echo '<tr >
+                <td>'.$tipo_atendimento.'</td>
+                <td>'.$nome.'</td>
+                <td>'.$quant.'</td>
+                <td><a href="detail.php?type='.$type.'&id='.$id_tratamento.'">Clique Aqui</a></td>
+              </tr>';
+            }
             break;
         default:
             $sql = 'call atendimentos_proximos(0);';
@@ -101,7 +108,7 @@
                 <td>'.$medico.'</td>
                 <td>'.$tipo_atendimento.'</td>
                 <td>'.$telefone.'</td>
-                <td><a href="php/describe.php?id='.$id_atendimento.'">Clique Aqui</a></td>
+                <td><a href="detail.php?type='.$type.'&id='.$id_atendimento.'">Clique Aqui</a></td>
               </tr>';
             }
               break;

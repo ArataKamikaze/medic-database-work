@@ -1,12 +1,10 @@
-<canvas id="grafico_clientes_estado_civil2" width="300" height="300"></canvas>
+<canvas id="grafico_funcionario_idade_histograma" width="300" height="300"></canvas>
 <?php
-    if ($type == "clientes"){
       $i = 0;
-      $sql  = 'call dados_clientes_idade(@media, @mediana, @desvio);';
-    }
+      $sql  = 'call dados_funcionarios_idade(@media, @mediana, @desvio);';
     ?>
     <script type='text/javascript'>
-      var ctx = document.getElementById('grafico_clientes_estado_civil2').getContext('2d');
+      var ctx = document.getElementById('grafico_funcionario_idade_histograma').getContext('2d');
       var grafico_clientes_estado_civil = new Chart(ctx, {
         type: 'line',
         data: {
@@ -41,7 +39,7 @@
             plugins:{
                 title:{
                     display: true,
-                    text: 'Idade dos clientes',
+                    text: 'Idade dos Funcionários',
                     position: 'top',
                     font: {
                         size: 20,

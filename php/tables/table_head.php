@@ -54,9 +54,9 @@
             break;
           case "tratamentos":
             echo "<tr >
-                    <th>Nome</th>
-                    <th>Cadastro</th>
-                    <th>Tier</th>
+                    <th>Tipo de tratamento</th>
+                    <th>Cliente</th>
+                    <th>Atendimentos Realizados/Agendados</th>
                     <th>Detalhes</th>
                   </tr>";
             break;

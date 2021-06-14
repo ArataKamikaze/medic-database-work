@@ -9,5 +9,6 @@
     <script src="../../js/uikit.min.js"></script>
     <script src="../../js/uikit-icons.min.js"></script>
     <script src="../../js/chart.min.js" type="text/javascript"></script>
+
     <link rel="shortcut icon" href="../../img/logo.png">
 </head>
