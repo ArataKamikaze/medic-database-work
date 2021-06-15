@@ -4,7 +4,7 @@
 
 This application takes part of the practical ~~database~~ PHP work.
 
-Demo: https://github.com/
+Demo: https://bone-dry-freeze.000webhostapp.com/index.php
 
 ## Getting Started 🏁
 
