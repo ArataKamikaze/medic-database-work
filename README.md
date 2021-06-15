@@ -36,9 +36,9 @@ Example: MySQL variables
 
 # Follow these steps to usage
 
-- Create and populate database with Python
-- Copy the repository to your web server folder
-- Run from index.php and enjoy you PHP's application
+- 1º Create and populate database with Python
+- 2º Copy the repository to your web server folder
+- 3º Run from index.php and enjoy you PHP's application
 
 ## Project Architecture 📁
 
