@@ -55,6 +55,7 @@ Example: MySQL variables
 │   ├── blocks
 │   ├── charts
 │   ├── config
+│   ├── forms
 │   ├── pages
 │   └── tables
 ├── index.php
