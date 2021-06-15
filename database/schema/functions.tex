@@ -1,0 +1,218 @@
+\subsection{obter\_porcentagem\_de\_medicos\_funcionarios}
+
+\textbf{Parâmetros:} Nada
+
+\textbf{Retorno:} a quantidade de médicos funcionários sobre a quantidade total de médicos
+
+\begin{verbatim}
+select obter_porcentagem_de_medicos_funcionarios() from dual;
+\end{verbatim}
+
+\subsection{obter\_n\_atendimentos\_proximo}
+
+\textbf{Parâmetros:} Nada
+
+\textbf{Retorno:} a quantidade de páginas para atendimentos próximos
+
+
+\subsection{obter\_n\_lista\_de\_clientes}
+
+\textbf{Parâmetros:} O texto do filtro
+
+\textbf{Retorno:} a quantidade de páginas para atendimentos próximos
+
+\begin{verbatim}
+select obter_n_lista_de_clientes("") from dual;
+\end{verbatim}
+
+\subsection{obter\_n\_lista\_de\_medicos}
+
+\textbf{Parâmetros:} O texto do filtro
+
+\textbf{Retorno:} a quantidade de páginas para atendimentos próximos
+
+\begin{verbatim}
+select obter_n_lista_de_medicos("") from dual;
+\end{verbatim}
+
+\subsection{obter\_n\_lista\_de\_medicos\_prestadores}
+
+\textbf{Parâmetros:} O texto do filtro
+
+\textbf{Retorno:} a quantidade de páginas para atendimentos próximos
+
+\begin{verbatim}
+select obter_n_lista_de_medicos_prestadores("") from dual;
+\end{verbatim}
+
+\subsection{obter\_n\_lista\_de\_medicos\_funcionarios}
+
+\textbf{Parâmetros:} O texto do filtro
+
+\textbf{Retorno:} a quantidade de páginas para atendimentos próximos
+
+\subsection{obter\_n\_lista\_de\_planos}
+
+\textbf{Parâmetros:} O texto do filtro
+
+\textbf{Retorno:} a quantidade de páginas para atendimentos próximos
+
+\begin{verbatim}
+select obter_n_lista_de_planos("") from dual;
+\end{verbatim}
+
+\subsection{obter\_n\_lista\_de\_tratamentos}
+
+\textbf{Parâmetros:} O texto do filtro
+
+\textbf{Retorno:} a quantidade de páginas para atendimentos próximos
+
+\begin{verbatim}
+select obter_n_lista_de_tratamentos("") from dual;
+\end{verbatim}
+
+\subsection{obter\_n\_atendimentos\_realizados}
+
+\textbf{Parâmetros:} O texto do filtro, data de inicio, data do fim
+
+\textbf{Retorno:} a quantidade de páginas para atendimentos próximos
+
+\begin{verbatim}
+select obter_n_atendimentos_realizados("", "2021-5-1", "2023-06-19") from dual;
+\end{verbatim}
+
+\subsection{CRM\_para\_CPF}
+
+\textbf{Parâmetros:} CRM
+
+\textbf{Retorno:} CPF
+
+\begin{verbatim}
+select CRM_para_CPF(44) from dual;
+\end{verbatim}
+
+\subsection{obter\_n\_atendimentos\_realizados\_por\_um\_cliente}
+
+\textbf{Parâmetros:} cpf, filtro
+
+\textbf{Retorno:} a quantidade de páginas
+
+\begin{verbatim}
+select obter_n_atendimentos_realizados_por_um_cliente(50545756421, "") from dual;
+\end{verbatim}
+
+\subsection{obter\_n\_atendimentos\_agendados\_por\_um\_cliente}
+
+\textbf{Parâmetros:} cpf, filtro
+
+\textbf{Retorno:} a quantidade de páginas
+
+\begin{verbatim}
+	select atendimentos_agendados_por_um_cliente_lista(50545756421, "") from dual;
+\end{verbatim}
+
+\subsection{obter\_n\_atendimentos\_realizados\_por\_um\_cliente}
+
+\textbf{Parâmetros:} cpf
+
+\textbf{Retorno:} a quantidade de páginas
+
+\begin{verbatim}
+select obter_n_tratamento_por_cliente(50545756421) from dual;
+\end{verbatim}
+
+\subsection{obter\_n\_planos\_de\_saude\_de\_um\_cliente\_lista}
+
+\textbf{Parâmetros:} cpf
+
+\textbf{Retorno:} a quantidade de páginas
+
+\begin{verbatim}
+	select obter_n_planos_de_saude_de_um_cliente_lista(50545756421) from dual;
+\end{verbatim}
+
+\subsection{obter\_data\_de\_adminissao}
+
+\textbf{Parâmetros:} cpf
+
+\textbf{Retorno:} data de admissão do funcionário
+
+\begin{verbatim}
+	select obter_data_de_adminissao(26115330408) from dual;
+\end{verbatim}
+
+\subsection{obter\_n\_depedentes\_de\_um\_funcionario}
+
+\textbf{Parâmetros:} cpf
+
+\textbf{Retorno:} Nada
+
+\begin{verbatim}
+	select obter_n_depedentes_de_um_funcionario(26115330408) from dual;
+\end{verbatim}
+
+\subsection{obter\_n\_especialidades\_de\_um\_medico}
+
+\textbf{Parâmetros:} crm
+
+\textbf{Retorno:} o número de páginas
+
+\begin{verbatim}
+	select obter_n_especialidades_de_um_medico(3) from dual;
+\end{verbatim}
+
+\subsection{obter\_n\_planos\_de\_saude\_de\_um\_medico}
+
+\textbf{Parâmetros:} crm
+
+\textbf{Retorno:} o número de páginas
+
+\begin{verbatim}
+	select obter_n_planos_de_saude_de_um_medico(3) from dual;
+\end{verbatim}
+
+\subsection{obter\_n\_atendimentos\_realizados\_por\_um\_medico}
+
+\textbf{Parâmetros:} crm
+
+\textbf{Retorno:} o número de páginas
+
+\begin{verbatim}
+	select obter_n_atendimentos_realizados_por_um_medico(3) from dual;
+\end{verbatim}
+
+\subsection{obter\_n\_atendimentos\_agendados\_por\_um\_medico}
+
+\textbf{Parâmetros:} crm
+
+\textbf{Retorno:} o número de páginas
+
+\begin{verbatim}
+	select obter_n_atendimentos_agendados _por_um_medico(3) from dual;
+\end{verbatim}
+
+
+\subsection{verificar\_se\_existe\_pessoa}
+
+\textbf{Parâmetros:} cpf
+
+\textbf{Retorno:} 0 se não, 1 se sim
+
+\begin{verbatim}
+	select verificar_se_existe_pessoa(26115330408) from dual;
+	
+	select verificar_se_existe_pessoa(26115330409) from dual;
+\end{verbatim}
+
+\subsection{verificar\_se\_existe\_cliente}
+
+\textbf{Parâmetros:} cpf
+
+\textbf{Retorno:} 0 se não, 1 se sim
+
+\begin{verbatim}
+	select verificar_se_existe_cliente(26115330408) from dual;
+	
+	select verificar_se_existe_cliente(26115330409) from dual;
+\end{verbatim}
+

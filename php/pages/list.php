@@ -10,7 +10,6 @@
     include("../config/navigation.php");
     if ($type != "atendimentos") {
         include("../blocks/search.php");
-        include("../tables/table.php");
     }
     else {
         ?>
@@ -27,5 +26,6 @@
         </div>
         <?php
     }
+    include("../tables/table.php");
     include("../config/bodyend.php");
 ?>

@@ -1,8 +1,86 @@
-# Sistema-de-clinica-medica-bd
+# MEDIC DATABASE WORK
 
-## To do:
+## About Project 💻
 
+<<<<<<< HEAD
 ### add informações no fluxograma da página de clientes
 ### corrigir os detalhes em index.php
 ### mais informações não funciona em index.php
 ### médicos e planos de saude requerem  
+=======
+This application takes part of the practical ~~database~~ PHP work.
+
+Demo: https://github.com/
+
+## Getting Started 🏁
+
+### Prerequisites
+
+To clone and run this application, you'll need Git, a web server like Xampp or WampServer, Python, Node.js and MySQL installed on your computer.
+
+### Installation
+
+From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/ArataKamikaze/medic-database-work.git
+```
+
+# Go into the repository
+
+$ cd medic-database-work
+
+# Install prerequisites
+
+$ Python, MySQL, Node.js and web server
+
+### Configuration
+
+The application need fill with the envinronment's variables.
+Example: MySQL variables
+
+# Follow these steps to usage
+
+- 1º Create and populate database with Python
+- 2º Copy the repository to your web server folder
+- 3º Run from index.php and enjoy you PHP's application
+
+## Project Architecture 📁
+
+```
+.
+├── css
+├── database
+│   ├── database-mockup
+│   ├── populate-db
+│   └── schema
+├── img
+├── js
+├── php
+│   ├── blocks
+│   ├── charts
+│   ├── config
+│   ├── pages
+│   └── tables
+├── index.php
+└── README.md
+```
+
+## Technologies 🚀
+
+- [PHP](https://www.php.net/) | UiKit | Chartjs
+- [Python](https://www.python.org/) | Numpy | Pandas
+- [Node.js](https://nodejs.org/en/) | Leite | Faker.js
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [MySQL](https://www.mysql.com/)
+- [LaTeX](https://pt.wikipedia.org/wiki/LaTeX)
+
+## License 🔎
+
+This project is under the MIT license. See the LICENSE for details.
+
+Made with ♥ by Daniel Romagnoli, Matheus de Mello, Samuel Ferreira Pimentel and Victor Cunha 👋 Get in touch!
+>>>>>>> 7226612bef37c8e66de8a0752d8a65758eccf4fb

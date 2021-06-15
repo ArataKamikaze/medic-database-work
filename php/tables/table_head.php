@@ -31,9 +31,9 @@
           case "atendimentos":
             echo "<tr >
                     <th>Cliente</th>
+                    <th>Tipo de atendimento</th>
                     <th>Médico</th>
                     <th>Data/Hora</th>
-                    <th>Plano de Saúde</th>
                     <th>Detalhes</th>
                   </tr>";
             break;

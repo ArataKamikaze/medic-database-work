@@ -38,13 +38,35 @@
             }
             break;
         case "atendimentos":
-            echo "<tr >
-                    <th>Cliente</th>
-                    <th>Médico</th>
-                    <th>Data/Hora</th>
-                    <th>Plano de Saúde</th>
-                    <th>Detalhes</th>
-                  </tr>";
+            switch ($subtype) {
+                case 'realizados':
+                    $sql = 'call  lista_de_atendimentos_realizados('.($page-1).', "", "'.$data_ini.'", "'.$data_fim.'");';
+                    foreach ($dbl->query($sql) as $row) {
+                      $nome = $row['nome_cliente'];
+                      $tipo_atendimento = $row['tipo_de_atendimento'];
+                      $medico = $row['nome_medico'];
+                      $horario = $row['horario_inicio_real'];
+                      $id_atendimento = $row['atendimento_id'];
+
+                      echo '<tr >
+                        <td>'.$nome.'</td>
+                        <td>'.$tipo_atendimento.'</td>
+                        <td>'.$medico.'</td>
+                        <td>'.$horario.'</td>
+                        <td><a href="detail.php?type='.$type.'&id='.$id_atendimento.'">Clique Aqui</a></td>
+                      </tr>';
+                    }
+                    break;
+                case 'agendados':
+
+                    break;
+                case 'novos':
+
+                    break;
+                default:
+                  // code...
+                  break;
+            }
             break;
         case "planos":
             $sql = 'call lista_de_planos('.$page.', "'.$search.'");';
