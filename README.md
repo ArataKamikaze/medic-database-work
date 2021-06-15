@@ -2,12 +2,6 @@
 
 ## About Project 💻
 
-<<<<<<< HEAD
-### add informações no fluxograma da página de clientes
-### corrigir os detalhes em index.php
-### mais informações não funciona em index.php
-### médicos e planos de saude requerem  
-=======
 This application takes part of the practical ~~database~~ PHP work.
 
 Demo: https://github.com/
@@ -83,4 +77,3 @@ Example: MySQL variables
 This project is under the MIT license. See the LICENSE for details.
 
 Made with ♥ by Daniel Romagnoli, Matheus de Mello, Samuel Ferreira Pimentel and Victor Cunha 👋 Get in touch!
->>>>>>> 7226612bef37c8e66de8a0752d8a65758eccf4fb
