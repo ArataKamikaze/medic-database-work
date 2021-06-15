@@ -2,7 +2,7 @@
 
 ## About Project 💻
 
-This application takes part of the practical database work.
+This application takes part of the practical ~~database~~ PHP work.
 
 Demo: https://github.com/
 
@@ -10,7 +10,7 @@ Demo: https://github.com/
 
 ### Prerequisites
 
-To clone and run this application, you'll need Git, a web server like Xampp or WampServer, Python and MySQL installed on your computer.
+To clone and run this application, you'll need Git, a web server like Xampp or WampServer, Python, Node.js and MySQL installed on your computer.
 
 ### Installation
 
@@ -27,7 +27,7 @@ $ cd medic-database-work
 
 # Install prerequisites
 
-$ Python, MySQL and web server
+$ Python, MySQL, Node.js and web server
 
 ### Configuration
 
@@ -47,6 +47,7 @@ Example: MySQL variables
 ├── css
 ├── database
 │   ├── database-mockup
+│   ├── populate-db
 │   └── schema
 ├── img
 ├── js
@@ -62,12 +63,14 @@ Example: MySQL variables
 
 ## Technologies 🚀
 
-- [Python](https://www.python.org/) | Numpy | Pandas
 - [PHP](https://www.php.net/) | UiKit | Chartjs
-- [MySQL](https://www.mysql.com/)
+- [Python](https://www.python.org/) | Numpy | Pandas
+- [Node.js](https://nodejs.org/en/) | leite | faker.js
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [MySQL](https://www.mysql.com/)
+- [LaTeX](https://pt.wikipedia.org/wiki/LaTeX)
 
 ## License 🔎
 
