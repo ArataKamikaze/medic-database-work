@@ -65,7 +65,7 @@ Example: MySQL variables
 
 - [PHP](https://www.php.net/) | UiKit | Chartjs
 - [Python](https://www.python.org/) | Numpy | Pandas
-- [Node.js](https://nodejs.org/en/) | leite | faker.js
+- [Node.js](https://nodejs.org/en/) | Leite | Faker.js
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
