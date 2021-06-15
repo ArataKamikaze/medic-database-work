@@ -7,7 +7,6 @@ switch ($type) {
         $sql =  'select obter_n_lista_de_medicos("'.$search.'") as num from dual;';
         break;
   case "atendimentos":
-        echo "No luck there mate";
         $sql =  'select obter_n_lista_de_medicos("'.$search.'") as num from dual;';
         break;
   case "planos":

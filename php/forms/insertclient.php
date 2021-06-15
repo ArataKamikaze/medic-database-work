@@ -7,16 +7,20 @@ function validateMe(){
     var y1=document.getElementById("sexo").options;
     if(y[x] != "Casado(a)"|| y[x] != "Divorciado(a)" || y[x] != "Separado(a)" || y[x] != "Solteiro(a)" || y[x] != "Viuvo(a)"){
        return false;
+       print("falso mano");/
     }
     if(y1[x1] != "M"|| y1[x1] != "F"){
        return false;
+       print("falso mano");
     }
 
     return true;
 }
 </script>
 <div class="uk-container uk-container-small">
-  <form name="Form" id ="Form" onSubmit="return validateMe()">
+  <form name="Form" id ="Form" action="../config/inserttodatabase.php" method="get" onSubmit="return validateMe()">
+    <input type="hidden" name="cpf" value="<?php echo $cpf; ?>">
+    <input type="hidden" name="type" value="<?php echo $type; ?>">
     <fieldset class="uk-fieldset">
 
         <legend class="uk-legend">Informações básicas</legend>
@@ -43,8 +47,8 @@ function validateMe(){
         <div class="uk-margin">
             <select class="uk-select" name="sexo" id="sexo">
                 <option value="choose">Selecione o sexo</option>
-                <option value="M">M</option>
-                <option value="F">F</option>
+                <option value="1">M</option>
+                <option value="0">F</option>
             </select>
         </div>
 
@@ -65,19 +69,19 @@ function validateMe(){
         </div>
 
         <div class="uk-margin">
-            <input class="uk-input"  name="Cidade" type="text" placeholder="Cidade">
+            <input class="uk-input"  name="cidade" type="text" placeholder="Cidade">
         </div>
 
         <div class="uk-margin">
-            <input class="uk-input"  name="Bairro" type="text" placeholder="Cidade">
+            <input class="uk-input"  name="bairro" type="text" placeholder="Bairro">
         </div>
 
         <div class="uk-margin">
-            <input class="uk-input"  name="Logradouro" type="text" placeholder="Logradouro">
+            <input class="uk-input"  name="logradouro" type="text" placeholder="Logradouro">
         </div>
 
         <div class="uk-margin">
-            <input class="uk-input"  name="Complemento" type="text" placeholder="Complemento">
+            <input class="uk-input"  name="complemento" type="text" placeholder="Complemento">
         </div>
 
         <div class="uk-margin">
@@ -85,7 +89,7 @@ function validateMe(){
         </div>
 
         <div class="uk-margin">
-            <input class="uk-input"  name="telefone" type="e-mail" placeholder="DarthVader22@Imperio.com 👌">
+            <input class="uk-input"  name="email" type="e-mail" placeholder="e-mail... (DarthVader22@Imperio.com 👌)">
         </div>
 
         <legend class="uk-legend">Doenças pré-existentes:</legend>
@@ -111,13 +115,13 @@ function validateMe(){
             foreach ($dbl->query($sql) as $row) {
               $nome = $row['nome'];
               $id = $row['plano_de_saude_id'];
-              echo '<div class="uk-width-1-4"><label><input class="uk-checkbox" type="checkbox" value="'.$id.'" name="doenca_'.$id.'"> '.$nome.'</label><br></div>';
+              echo '<div class="uk-width-1-4"><label><input class="uk-checkbox" type="checkbox" value="'.$id.'" name="plano_'.$id.'"> '.$nome.'</label><br></div>';
             }
              ?>
         </div>
 
         <div class="uk-margin-large uk-flex uk-flex-center">
-            <button type="sumbit" class="uk-margin-medium-right uk-button uk-button-primary uk-button-large">Enviar</button>
+            <button type="submit" class="uk-margin-medium-right uk-button uk-button-primary uk-button-large">Enviar</button>
             <button type="button" class="uk-margin-medium-left uk-button uk-button-danger uk-button-large" onclick='window.location.href="list.php?type=<?php echo $type;?>"'>Cancelar</button>
         </div>
     </fieldset>
