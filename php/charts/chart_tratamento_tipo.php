@@ -1,6 +1,6 @@
 <canvas id="grafico_tratamento_tipo" width="300" height="200"></canvas>
 <?php
-      $sql = 'call hospital.obter_dados_tratamentos_quantidades();';
+      $sql = 'call obter_dados_tratamentos_quantidades();';
 
 ?>
     <script type='text/javascript'>

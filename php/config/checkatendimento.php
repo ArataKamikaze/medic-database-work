@@ -2,11 +2,11 @@
 switch ($subtype ) {
   case 'realizados':
       include("../blocks/atendimentos_realizados.php");
-      $sql =  'select hospital.obter_n_atendimentos_realizados("'.$data_ini.'", "'.$data_fim.'") as num;';
+      $sql =  'select obter_n_atendimentos_realizados("'.$data_ini.'", "'.$data_fim.'") as num;';
       break;
   case 'agendados':
       include("../blocks/atendimentos_agendados.php");
-      $sql = 'select hospital.obter_n_atendimentos_agendados("'.$data_ini.'", "'.$data_fim.'") as num;';
+      $sql = 'select obter_n_atendimentos_agendados("'.$data_ini.'", "'.$data_fim.'") as num;';
     break;
   default:
     // code...

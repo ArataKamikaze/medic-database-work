@@ -3228,7 +3228,7 @@ DELIMITER ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `obter_tipos_de_tratamento`()
 begin
-	SELECT nome FROM hospital.tipo_de_tratamento;
+	SELECT nome FROM tipo_de_tratamento;
 end ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;

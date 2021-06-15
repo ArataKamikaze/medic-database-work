@@ -1,7 +1,6 @@
 <canvas id="grafico_tratamento_cronico" width="300" height="200"></canvas>
 <?php
-      $sql = 'call hospital.obter_dados_tratamentos_cronicos();';
-
+      $sql = 'call obter_dados_tratamentos_cronicos();';
 ?>
     <script type='text/javascript'>
       var ctx = document.getElementById('grafico_tratamento_cronico').getContext('2d');

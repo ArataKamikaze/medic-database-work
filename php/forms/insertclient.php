@@ -111,7 +111,7 @@ function validateMe(){
 
         <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
             <?php
-            $sql = 'call hospital.obter_plano_de_saude();';
+            $sql = 'call obter_plano_de_saude();';
             foreach ($dbl->query($sql) as $row) {
               $nome = $row['nome'];
               $id = $row['plano_de_saude_id'];

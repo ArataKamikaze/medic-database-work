@@ -1495,7 +1495,7 @@ end$$
 drop procedure if exists obter_tipos_de_tratamento;$$
 create procedure obter_tipos_de_tratamento()
 begin
-	SELECT nome FROM hospital.tipo_de_tratamento;
+	SELECT nome FROM tipo_de_tratamento;
 end;$$
 
 drop procedure if exists criar_tratamento;$$

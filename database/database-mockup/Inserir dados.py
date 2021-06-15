@@ -811,7 +811,7 @@ seis_meses_atras = datetime.datetime.now() + relativedelta(months=-6)
 
 sql1= "select exists (select * from medico_funcionario where CRM = %s) from dual;"
 sql2= "SELECT preco FROM tipo_de_atendimento where tipo_de_atendimento_id = %s;"
-sql3 = "SELECT desconto FROM hospital.plano_de_saude_tipo_de_atendimento where plano_de_saude_id = %s and tipo_de_atendimento_id = %s;"
+sql3 = "SELECT desconto FROM plano_de_saude_tipo_de_atendimento where plano_de_saude_id = %s and tipo_de_atendimento_id = %s;"
 sql4 = "select eh_cronico from tipo_de_tratamento join tratamento using(tipo_de_tratamento_id) where tratamento_id = %s"
 
 

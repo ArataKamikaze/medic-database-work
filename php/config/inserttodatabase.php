@@ -47,7 +47,7 @@ $doencas = substr($doencas, 0, -1);
 
 
 $planos = "";
-$sql = "call hospital.obter_plano_de_saude();";
+$sql = "call obter_plano_de_saude();";
 foreach ($dbl->query($sql) as $row) {
     $plano_id = $row['plano_de_saude_id'];
     $id_plano = "";
@@ -77,9 +77,9 @@ $plano            = $_GET['plano'];
 $tipo_atendimento = $_GET['tipo_atendimento'];
 $cpf              = $_GET['cpf'];
 $tipo_tratamento  = $_GET['tipo_tratamento'];
-$sql = "call hospital.criar_tratamento(".$tipo_tratamento.", ".$cpf.");";
+$sql = "call criar_tratamento(".$tipo_tratamento.", ".$cpf.");";
 $res = $dbl->query($sql);
-$sql = "SELECT * FROM hospital.tratamento where cpf = ".$cpf.";";
+$sql = "SELECT * FROM tratamento where cpf = ".$cpf.";";
 foreach ($dbl->query($sql) as $row) {
   $tratamento_id = $row['tratamento_id'];
 }

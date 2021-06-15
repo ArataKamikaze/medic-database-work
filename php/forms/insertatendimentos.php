@@ -94,7 +94,7 @@ function validateMe(){
             <select class="uk-select" name="plano" id="plano">
                 <option value="choose">Selecione o plano de saude</option>
                 <?php
-                    $sql = 'SELECT * FROM hospital.plano_de_saude;';
+                    $sql = 'SELECT * FROM plano_de_saude;';
                     foreach ($dbl->query($sql) as $row) {
                       $nome = $row['nome'];
                       $id = $row['plano_de_saude_id'];
@@ -109,7 +109,7 @@ function validateMe(){
             <select class="uk-select" name="tipo_atendimento" id="tipo_atendimento">
                 <option value="choose">Selecione o tipo de atendimento</option>
                 <?php
-                    $sql = 'SELECT * FROM hospital.tipo_de_atendimento;';
+                    $sql = 'SELECT * FROM tipo_de_atendimento;';
                     foreach ($dbl->query($sql) as $row) {
                       $nome = $row['nome'];
                       $id = $row['tipo_de_atendimento_id'];
@@ -135,7 +135,7 @@ function validateMe(){
             <select class="uk-select" name="tipo_tratamento" id="tipo_tratamento">
                 <option value="choose">Selecione o tipo do tratamento</option>
                 <?php
-                    $sql = 'SELECT * FROM hospital.tipo_de_tratamento;';
+                    $sql = 'SELECT * FROM tipo_de_tratamento;';
                     foreach ($dbl->query($sql) as $row) {
                       $nome = $row['nome'];
                       $id = $row['tipo_de_tratamento_id'];

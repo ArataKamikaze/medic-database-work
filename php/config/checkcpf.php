@@ -9,7 +9,7 @@
     }
     switch ($type) {
       case "clientes":
-          $sql = ("select hospital.verificar_se_existe_cliente(".$cpf.") as checkcpf;");
+          $sql = ("select verificar_se_existe_cliente(".$cpf.") as checkcpf;");
           break;
       case "medicos":
 
