@@ -721,7 +721,7 @@ begin
 		sum(comissao_da_clinica) as valor_arrecadado_total,
 		count(*) as quantidade
 	from atendimento
-	where horario_inicio_real between inicio and fim
+	where horario_agendado between inicio and fim
     and atendimento.estado = 0;
 end;$$
 
