@@ -7,20 +7,8 @@ switch ($type) {
         $sql =  'select obter_n_lista_de_medicos("'.$search.'") as num from dual;';
         break;
   case "atendimentos":
-      switch ($subtype) {
-          case "realizados"
-              $sql =  'select obter_n_lista_de_medicos("'.$search.'") as num from dual;';
-              break;
-          case 'agendados':
-
-              break;
-          case 'novos':
-
-              break;
-          default:
-
-              break;
-    }
+        $sql =  'select obter_n_lista_de_medicos("'.$search.'") as num from dual;';
+        break;
   case "planos":
         $sql =  'select obter_n_lista_de_planos("'.$search.'") as num from dual;';
         break;

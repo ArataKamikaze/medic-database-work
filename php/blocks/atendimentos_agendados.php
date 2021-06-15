@@ -8,7 +8,7 @@ if(isset($_GET['fim'])){
     $data_fim = $_GET['fim'];
 }
 
-$sql = "call obter_dados_atendimentos_realizados('".$data_ini."','".$data_fim."')";
+$sql = "call obter_dados_atendimentos_agendados('".$data_ini."','".$data_fim."')";
   foreach ($dbl->query($sql) as $row) {
       $recebido_media    = $row['valor_recebido_media'];
       $recebido_desvio   = $row['valor_recebido_desvio'];

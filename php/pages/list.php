@@ -21,7 +21,7 @@
         <div class="uk-container uk-container-small">
           <?php
               include("../config/subnavatendimentos.php");
-              include("../config/checkatendimento.php")
+              include("../config/checkatendimento.php");
           ?>
         </div>
         <?php
