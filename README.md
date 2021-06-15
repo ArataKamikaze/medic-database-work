@@ -47,8 +47,8 @@ Example: MySQL variables
 ├── css
 ├── database
 │   ├── database-mockup
-│   ├── populate-db
-│   └── schema
+│   ├── populate-db-mockup
+│   └── schema-doc-tex
 ├── img
 ├── js
 ├── php
@@ -77,4 +77,4 @@ Example: MySQL variables
 
 This project is under the MIT license. See the LICENSE for details.
 
-Made with ♥ by Daniel Romagnoli, Matheus de Mello, Samuel Ferreira Pimentel and Victor Cunha 👋 Get in touch!
+Made with ♥ by Daniel Romagnoli, Matheus de Mello, Samuel Pimentel and Victor Cunha 👋 Get in touch!
