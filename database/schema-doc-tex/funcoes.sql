@@ -663,11 +663,12 @@ begin
 		sum(comissao_da_clinica) as valor_arrecadado_total,
 		count(*) as quantidade
 	from atendimento
-	where horario_inicio_real between inicio and fim;
+	where horario_inicio_real between inicio and fim
+    and estado = 1;
 end;$$
 
 drop function if exists obter_n_atendimentos_realizados;$$
-create function obter_n_atendimentos_realizados(filtro varchar(50), horario_inicio date, horario_fim date)
+create function obter_n_atendimentos_realizados(horario_inicio date, horario_fim date)
 returns int
 begin
 	declare n int;
@@ -677,14 +678,13 @@ begin
 		join tratamento using(tratamento_id)
         join pessoa using(cpf)
 		where horario_inicio_real between horario_inicio and horario_fim
-        and atendimento.estado = 1
-        and pessoa.nome like concat("%",filtro,"%");
+        and atendimento.estado = 1;
     
     return n;
 end$$
 
 drop procedure if exists lista_de_atendimentos_realizados;$$
-create procedure lista_de_atendimentos_realizados(in k int, filtro varchar(50), horario_inicio date, horario_fim date)
+create procedure lista_de_atendimentos_realizados(in k int, horario_inicio date, horario_fim date)
 begin
 	set k = k * 10;
 
@@ -706,13 +706,27 @@ begin
     join pessoa as cliente using(cpf)
 	where horario_inicio_real between horario_inicio and horario_fim
     and atendimento.estado = 1
-    and cliente.nome like concat("%",filtro,"%")
     limit k, 10;
 end$$
 
+drop procedure if exists obter_dados_atendimentos_agendados$$
+create procedure obter_dados_atendimentos_agendados(in inicio date, in fim date)
+begin
+	select
+		avg(valor) as valor_recebido_media,
+		std(valor) as valor_recebido_desvio,
+		sum(valor) as valor_recebido_soma,
+		avg(comissao_da_clinica) as valor_arrecadado_media,
+		std(comissao_da_clinica) as valor_arrecadado_desvio,
+		sum(comissao_da_clinica) as valor_arrecadado_total,
+		count(*) as quantidade
+	from atendimento
+	where horario_inicio_real between inicio and fim
+    and estado = 0;
+end;$$
 
 drop function if exists obter_n_atendimentos_agendados;$$
-create function obter_n_atendimentos_agendados(filtro varchar(50), horario_inicio date, horario_fim date)
+create function obter_n_atendimentos_agendados(horario_inicio date, horario_fim date)
 returns int
 begin
 	declare n int;
@@ -723,13 +737,13 @@ begin
         join pessoa using(cpf)
 		where horario_agendado between horario_inicio and horario_fim
         and atendimento.estado = 0
-        and pessoa.nome like concat("%",filtro,"%");
+        and estado = 0;
     
     return n;
 end$$
 
 drop procedure if exists lista_de_atendimentos_agendados;$$
-create procedure lista_de_atendimentos_agendados(in k int, filtro varchar(50), horario_inicio date, horario_fim date)
+create procedure lista_de_atendimentos_agendados(in k int, horario_inicio date, horario_fim date)
 begin
 	set k = k * 10;
 
@@ -751,7 +765,7 @@ begin
     join pessoa as cliente using(cpf)
 	where horario_agendado between horario_inicio and horario_fim
     and atendimento.estado = 0
-    and cliente.nome like concat("%",filtro,"%")
+    and estado = 0
     limit k, 10;
 end$$
 
