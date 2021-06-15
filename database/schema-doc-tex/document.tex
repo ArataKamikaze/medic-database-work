@@ -1,10 +1,20 @@
 \documentclass{article}
+
 \usepackage{amsmath,amsfonts,amssymb} %matematica
 \usepackage{indentfirst}
-\usepackage{listings}
+\usepackage[lmargin=3cm,tmargin=3cm,rmargin=2cm,bmargin=2cm]{geometry}
+
+\author{Daniel Romagnoli \\ Matheus de Mello \\ Samuel Pimentel \\ Victor Cunha}
+\title{Dicionário de dados}
 
 \begin{document}
-\tableofcontents	
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+\section{Relações}
+\input{relacoes.tex}
 
 \section{Funções}
 \input{functions.tex}
@@ -12,4 +22,5 @@
 \section{Procedures}
 \input{procedures.tex}
 
+\input{outros.tex}
 \end{document}
