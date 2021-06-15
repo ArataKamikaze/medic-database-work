@@ -62,12 +62,8 @@ $ 3º - Run from index.php and enjoy you PHP's application
 
 ## Technologies 🚀
 
-- [Python](https://www.python.org/)
-  -- Numpy
-  -- Pandas
-- [PHP](https://www.php.net/)
-  -- UiKit
-  -- chartjs
+- [Python](https://www.python.org/) | Numpy | Pandas
+- [PHP](https://www.php.net/) | UiKit | Chartjs
 - [MySQL](https://www.mysql.com/)
 - [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
