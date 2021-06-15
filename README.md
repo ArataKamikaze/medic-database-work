@@ -2,89 +2,79 @@
 
 ## About Project 💻
 
-This application is responsible for searching for data in database mysql, generate one file from this data and sending this files from sftp.
+This application takes part of the practical database work.
+
+Demo: https://github.com/
 
 ## Getting Started 🏁
 
 ### Prerequisites
 
-To clone and run this application, you'll need Git and Node.js installed on your computer.
+To clone and run this application, you'll need Git, a web server like Xampp or WampServer, Python and MySQL installed on your computer.
 
 ### Installation
 
 From your command line:
 
 ```bash
-# This step only needs to be execute once on your computer and please make sure the registry URL is up to date
-$ npm config set @mundiale-private:registry http://tup02apl027:8081/repository/mundiale-private/
-```
-
-```bash
 # Clone this repository
-$ git clone https://git.mundiale.com.br/metric/d1-mailing-remarketing-generate-file.git
+$ git clone https://github.com/ArataKamikaze/medic-database-work.git
 ```
 
 # Go into the repository
 
-$ cd d1-mailing-remarketing-generate-file
+$ cd medic-database-work
 
-# Install dependencies
+# Install prerequisites
 
-$ npm install
+$ Python, MySQL and web server
 
 ### Configuration
 
-The application has a .env-example with the envinronment's variables.
-Create and populate ".env" based on ".env-example".
+The application need fill with the envinronment's variables.
+Example: MySQL variables
 
-### Usage
+# Follow these steps to usage
 
-```bash
-# Run
-$ node cron.js
-```
+$ 1º - Create and populate database with Python
+$ 2º - Copy the repository to your web server folder
+$ 3º - Run from index.php and enjoy you PHP's application
 
 ## Project Architecture 📁
 
 ```
 .
-├── logs
-├── node_modules
-├── src
+├── css
+├── database
+│   ├── database-mockup
+│   └── schema
+├── img
+├── js
+├── php
+│   ├── blocks
+│   ├── charts
 │   ├── config
-│   ├── controllers
-│   └── services
-├── temp_files
-├── .env
-├── .env-example
-├── .eslintrc.json
-├── .gitignore
-├── cron.js
-├── ecosystem.config.js
-├── package-lock.json
-├── package.json
+│   ├── pages
+│   └── tables
+├── index.php
 └── README.md
 ```
 
 ## Technologies 🚀
 
-- [Cron](https://www.npmjs.com/package/cron)
-- [Dotenv](https://www.npmjs.com/package/dotenv)
-- [Path](https://www.npmjs.com/package/path)
-- [SSH2-SFTP-Client](https://www.npmjs.com/package/ssh2-sftp-client)
-- [Winston](https://www.npmjs.com/package/winston)
-- [Moment](https://www.npmjs.com/package/moment)
-- [Mysql2](https://www.npmjs.com/package/mysql2)
-- [xlsx](https://www.npmjs.com/package/xlsx)
-
-## Mundiale Components ⚙️
-
-- [Metrics](http://tup02git001/components/metrics)
+- [Python](https://www.python.org/)
+  -- Numpy
+  -- Pandas
+- [PHP](https://www.php.net/)
+  -- UiKit
+  -- chartjs
+- [MySQL](https://www.mysql.com/)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 
 ## License 🔎
 
-©️ Copyright 2021 Mundiale. All rights reserved.
+This project is under the MIT license. See the LICENSE for details.
 
-This file is part of the D1 MAILING REMARKETING GENERATE FILE project.
-
-The D1 MAILING REMARKETING GENERATE FILE project can not be copied and/or distributed without the express permission of Mundiale.
+Made with ♥ by Daniel Romagnoli, Matheus de Mello, Samuel Ferreira Pimentel and Victor Cunha 👋 Get in touch!
