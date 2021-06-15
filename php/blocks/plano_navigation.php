@@ -7,25 +7,14 @@
       <div>
           <div class="uk-card uk-card-default uk-card-body">
             <?php
-                $sql = 'select @media as media, @mediana as mediana, @desvio as desvio from dual;';
+                $sql = 'call plano_de_saude_que_mais_atende(@a, @b, @c, @d);';
                 foreach ($dbl->query($sql) as $row) {
-                  $media   = $row['media'];
-                  $mediana = $row['mediana'];
-                  $desvio  = $row['desvio'];
+                  $nome = $row['nome'];
                 }
              ?>
-             <p class="uk-text-bold uk-margin-small">Media:</p>
-             <p class="uk-margin-small"><?php echo $media; ?></p>
-             <p class="uk-text-bold uk-margin-small">Mediana:</p>
-             <p class="uk-margin-small"><?php  echo $mediana;?></p>
-             <p class="uk-text-bold uk-margin-small">Desvio:</p>
-             <p class="uk-margin-small"><?php  echo $desvio?></p>
+             <p class="uk-text-bold uk-margin-small">Plano com mais atendimentos:</p>
+             <p class="uk-margin-small"><?php echo $nome; ?></p>
           </div>
-      </div>
-    </div>
-    <div class="uk-grid-small uk-grid-match uk-child-width-expand@s uk-text-center" hidden="" id="charts_area" uk-grid>
-      <div>
-          <div class="uk-card uk-card-default uk-card-body"><?php include("../charts/chart_tratamento_tipo.php") ?></div>
       </div>
     </div>
 </div>

@@ -34,6 +34,7 @@
             }]
         },
         options:{
+            pointRadius:0,
             plugins:{
                 title:{
                     display: true,

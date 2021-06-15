@@ -10,29 +10,40 @@
               $telefone = $row['numero_do_telefone'];
               $cpf = $row['cpf'];
 
+              $retVal = ($sexo==1) ? "M" : "F" ;
+
               echo '<tr >
                 <td>'.$nome.'</td>
                 <td>'.$idade.'</td>
-                <td>'.$sexo.'</td>
+                <td>'.$retVal.'</td>
                 <td>'.$telefone.'</td>
                 <td><a href="detail.php?type='.$type.'&id='.$cpf.'">Clique Aqui</a></td>
               </tr>';
             }
             break;
         case "medicos":
-            $sql = 'call  lista_de_medicos('.$page.', "'.$search.'");';
+            if ($medtype == 0) {
+                $sql = 'call  lista_de_medicos('.($page-1).', "'.$search.'");';
+            }
+            else{
+              $sql = 'call  lista_de_medicos_prestadores('.($page-1).', "'.$search.'");';
+            }
+
             foreach ($dbl->query($sql) as $row) {
               $nome = $row['nome'];
               $idade = $row['idade'];
               $crm = $row['crm'];
               $sexo = $row['sexo'];
               $telefone = $row['numero_do_telefone'];
+              $comissao = $row['valor'];
+              $retVal = ($sexo==1) ? "M" : "F" ;
               echo '<tr >
                 <td>'.$nome.'</td>
                 <td>'.$idade.'</td>
                 <td>'.$crm.'</td>
-                <td>'.$sexo.'</td>
+                <td>'.$retVal.'</td>
                 <td>'.$telefone.'</td>
+                <td>'.$comissao.'</td>
                 <td><a href="detail.php?type='.$type.'&id='.$crm.'">Clique Aqui</a></td>
               </tr>';
             }
@@ -100,11 +111,12 @@
               $sexo = $row['sexo'];
               $telefone = $row['numero_do_telefone'];
               $cpf = $row['cpf'];
+              $retVal = ($sexo==1) ? "M" : "F" ;
               echo '<tr >
                 <td>'.$nome.'</td>
                 <td>'.$cargo.'</td>
                 <td>'.$admissao.'</td>
-                <td>'.$sexo.'</td>
+                <td>'.$retVal.'</td>
                 <td>'.$telefone.'</td>
                 <td><a href="detail.php?type='.$type.'&id='.$cpf.'">Clique Aqui</a></td>
               </tr>';

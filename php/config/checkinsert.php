@@ -7,7 +7,7 @@ switch ($type) {
 
       break;
   case "atendimentos":
-
+      include("../forms/insertatendimentos.php");
       break;
   case "planos":
 

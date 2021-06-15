@@ -25,6 +25,7 @@
                     <th>CRM</th>
                     <th>Sexo</th>
                     <th>Telefone</th>
+                    <th>Valor</th>
                     <th>Detalhes</th>
                   </tr>";
             break;

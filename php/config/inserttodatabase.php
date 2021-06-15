@@ -1,7 +1,7 @@
 <?php
 include("db.php");
-
 $type         = $_GET['type'];
+if ($type == "cliente") {
 $cpf          = $_GET['cpf'];
 $name         = $_GET['name'];
 $estado_civil = $_GET['estado_civil'];
@@ -67,7 +67,42 @@ $sql = "call cadastrar_pessoa('".$pessoa."');";
 $res = $dbl->query($sql);
 $sql = "call cadastrar_cliente('".$cliente."');";
 $res = $dbl->query($sql);
+}
+else{
+$sala             = $_GET['sala'];
+$data             = $_GET['data'];
+$hora             = $_GET['hora'];
+$medico           = $_GET['medico'];
+$plano            = $_GET['plano'];
+$tipo_atendimento = $_GET['tipo_atendimento'];
+$cpf              = $_GET['cpf'];
+$tipo_tratamento  = $_GET['tipo_tratamento'];
+$sql = "call hospital.criar_tratamento(".$tipo_tratamento.", ".$cpf.");";
+$res = $dbl->query($sql);
+$sql = "SELECT * FROM hospital.tratamento where cpf = ".$cpf.";";
+foreach ($dbl->query($sql) as $row) {
+  $tratamento_id = $row['tratamento_id'];
+}
+$cad_atendimento = array(
+                      "sala"=>$sala,
+                      "horario_agendado"=> $data." ".$hora.":00",
+                      "estado"=>0,
+                      "crm"=>$medico,
+                      "plano_de_saude_id"=>$plano,
+                      "tipo_de_atendimento_id"=>$tipo_atendimento,
+                      "tratamento_id"=>$tratamento_id
+                      );
+$cad_atendimento = json_encode($cad_atendimento);
+echo $cad_atendimento;
+
+
+$sql = "call agendar_atendimento('".$cad_atendimento."');";
+echo $sql;
+$res = $dbl->query($sql);
+
+
+}
  ?>
-<script language="Javascript">
-  location.href="../pages/list.php?type=<?php echo $type; ?>";
-</script>
+ <script language="Javascript">
+   location.href="../pages/list.php?type=<?php echo $type; ?>";
+ </script>

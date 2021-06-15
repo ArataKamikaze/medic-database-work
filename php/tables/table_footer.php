@@ -6,7 +6,7 @@
       <p class="uk-text-center ">Mais Informações</p>
   <?php } else {?>
       <ul class="uk-pagination uk-flex-center custom_white" uk-margin>
-          <li><a class="custom_white" href="list.php?page=<?php echo $type; ?>&page=<?php $prevPage = ($page-1 >= 1) ? $page-1 : $page ;echo $prevPage; ?>"><span uk-pagination-previous></span></a></li>
+          <li><a class="custom_white" href="list.php?type=<?php echo $type; ?>&page=<?php $prevPage = ($page-1 >= 1) ? $page-1 : $page ;echo $prevPage; ?>&subtype=<?php echo $subtype; ?>"><span uk-pagination-previous></span></a></li>
           <?php
           if ($pages >= 11) {
               if ($page <= 6) {
@@ -44,7 +44,7 @@
           }
 
            ?>
-        <li><a class="custom_white" href="list.php?page=<?php echo $type; ?>&page=<?php $nextPage = ($page+1 <= $pages) ? $page+1 : $page ;echo $nextPage; ?>"><span uk-pagination-next></span></a></li>
+        <li><a class="custom_white" href="list.php?type=<?php echo $type; ?>&page=<?php $nextPage = ($page+1 <= $pages) ? $page+1 : $page ;echo $nextPage; ?>&subtype=<?php echo $subtype; ?>"><span uk-pagination-next></span></a></li>
 
       </ul>
   <?php }?>
