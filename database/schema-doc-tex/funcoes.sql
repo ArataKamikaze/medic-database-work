@@ -722,7 +722,7 @@ begin
 		count(*) as quantidade
 	from atendimento
 	where horario_inicio_real between inicio and fim
-    and estado = 0;
+    and atendimento.estado = 0;
 end;$$
 
 drop function if exists obter_n_atendimentos_agendados;$$
@@ -736,8 +736,7 @@ begin
 		join tratamento using(tratamento_id)
         join pessoa using(cpf)
 		where horario_agendado between horario_inicio and horario_fim
-        and atendimento.estado = 0
-        and estado = 0;
+        and atendimento.estado = 0;
     
     return n;
 end$$
@@ -765,7 +764,6 @@ begin
     join pessoa as cliente using(cpf)
 	where horario_agendado between horario_inicio and horario_fim
     and atendimento.estado = 0
-    and estado = 0
     limit k, 10;
 end$$
 
@@ -796,7 +794,7 @@ create procedure atendimentos_realizados_por_cliente_dados(cpf bigint)
 begin
 	select count(*) as quant, max(horario_inicio_real) as data_ultima_consulta
 		from atendimento join tratamento
-		where estado=1 and tratamento.cpf = cpf;
+		where atendimento.estado=1 and tratamento.cpf = cpf;
 end;$$
 
 
