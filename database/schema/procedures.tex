@@ -1,0 +1,1113 @@
+\subsection{atendimentos\_proximos}
+
+\textbf{In:} k (página desejada, a primeira é k = 0)
+
+\textbf{Out:} Nada
+
+Uma tabela, ordenada por horario-agendado, com as colunas:
+
+\begin{itemize}
+	\item nome
+	\item numero\_do\_telefone
+	\item tipo\_de\_atendimento
+	\item horario\_agendado
+	\item atendimento\_id
+\end{itemize}
+
+\begin{verbatim}
+call atendimentos_proximos(0)
+\end{verbatim}
+
+
+\subsection{tratamentos\_cronicos\_proximos\_de\_estourar}
+
+\textbf{In:} k (página desejada, a primeira é k = 0)
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item nome\_do\_cliente
+	\item tipo\_de\_tratamento
+	\item numero\_do\_telefone
+	\item tratamento\_id
+\end{itemize}
+
+\begin{verbatim}
+call tratamentos_cronicos_proximos_de_estourar(0)
+\end{verbatim}
+
+% página 2
+
+\subsection{dados\_clientes\_idade}
+
+
+\textbf{In:} k (página desejada, a primeira é k = 0)
+
+\textbf{Out:} Media, mediana, desvio padrão
+
+\textbf{Retorno:} Uma tabela com as colunas x e y, para plotar a linha
+
+\begin{verbatim}
+call dados_clientes_idade(0)
+\end{verbatim}
+
+\subsection{dados\_clientes\_estado\_civil}
+
+
+\textbf{In:} Nada
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item estado\_civil
+	\item quant
+\end{itemize}
+
+\begin{verbatim}
+	call dados_clientes_estado_civil()
+\end{verbatim}
+
+
+
+
+% página 3
+
+\subsection{medicos\_funcionarios\_vs\_prestadores}
+
+\textbf{In:} Nada
+
+\textbf{Out:} Nada\subsection{lista\_de\_clientes}
+
+\textbf{In:} k (página desejada, a primeira é k = 0), filtro
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item nome
+	\item idade
+	\item sexo
+	\item numero\_do\_telefone
+	\item cpf
+\end{itemize}
+
+\begin{verbatim}
+	lista_de_clientes(0,"")
+\end{verbatim}
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item total
+	\item funcionarios
+	\item prestadores
+\end{itemize}
+
+\begin{verbatim}
+medicos_funcionarios_vs_prestadores()
+\end{verbatim}
+
+\subsection{dados\_das\_especialidades\_quant\_medicos}
+
+\textbf{In:} Nada
+
+\textbf{Out:} media, desvio padrão, máximo, minimo
+
+\textbf{Retorno:} três tabelas:
+
+\begin{itemize}
+	\item nomes das especialidades com valores máximo
+	\subitem nome
+	\item nomes das especialidades com valores mínimo
+	\subitem nome
+	\item informações para gráfico de barra
+	\subitem nome
+	\subitem valor
+\end{itemize}
+
+\begin{verbatim}
+call dados_das_especialidades_quant_medicos(@media, @desvio, @maximo, @minimo);
+
+select @media, @desvio, @maximo, @minimo from dual;
+\end{verbatim}
+
+
+\subsection{dados\_das\_especialidades\_valores\_arrecadados}
+
+\textbf{In:} Nada
+
+\textbf{Out:} media, desvio padrão, máximo, minimo
+
+\textbf{Retorno:} três tabelas:
+
+\begin{itemize}
+	\item nomes das especialidades com valores máximo
+	\subitem nome
+	\item nomes das especialidades com valores mínimo
+	\subitem nome
+	\item informações para gráfico de barra
+	\subitem nome
+	\subitem valor
+\end{itemize}
+
+\begin{verbatim}
+call dados_das_especialidades_valores_arrecadados(@media, @desvio, @maximo, @minimo);
+
+select @media, @desvio, @maximo, @minimo from dual;
+\end{verbatim}
+
+
+\subsection{dados\_das\_especialidades\_quant\_atendimentos}
+
+\textbf{In:} Nada
+
+\textbf{Out:} media, desvio padrão, máximo, minimo
+
+\textbf{Retorno:} três tabelas:
+
+\begin{itemize}
+	\item nomes das especialidades com valores máximo
+	\subitem nome
+	\item nomes das especialidades com valores mínimo
+	\subitem nome
+	\item informações para gráfico de barra
+	\subitem nome
+	\subitem valor
+\end{itemize}
+
+\begin{verbatim}
+call dados_das_especialidades_quant_atendimentos(@media, @desvio, @maximo, @minimo);
+
+select @media, @desvio, @maximo, @minimo from dual;
+\end{verbatim}
+
+
+\subsection{dados\_medicos\_vs\_quant\_pacientes}
+
+\textbf{In:} Nada
+
+\textbf{Out:} media, desvio padrão, máximo, minimo
+
+\textbf{Retorno:} três tabelas:
+
+\begin{itemize}
+	\item nomes das especialidades com valores máximo
+	\subitem nome
+	\item nomes das especialidades com valores mínimo
+	\subitem nome
+	\item informações para gráfico o pseudo histograma
+	\subitem nome
+	\subitem valor
+\end{itemize}
+
+\begin{verbatim}
+	call dados_medicos_vs_quant_pacientes(@media, @desvio, @maximo, @minimo);
+	
+	select @media, @desvio, @maximo, @minimo from dual;
+\end{verbatim}
+
+
+\subsection{lista\_de\_medicos}
+
+\textbf{In:} k (página desejada, a primeira é k = 0), filtro
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item nome
+	\item idade
+	\item crm
+	\item sexo
+	\item numero\_do\_telefone
+\end{itemize}
+
+\begin{verbatim}
+lista_de_medicos(0,"")
+\end{verbatim}
+
+\subsection{lista\_de\_medicos\_prestadores}
+
+\textbf{In:} k (página desejada, a primeira é k = 0), filtro
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item nome
+	\item idade
+	\item crm
+	\item sexo
+	\item numero\_do\_telefone
+\end{itemize}
+
+\begin{verbatim}
+	lista_de_medicos\_prestadores(0,"")
+\end{verbatim}
+
+\subsection{lista\_de\_medicos\_funcionarios}
+
+\textbf{In:} k (página desejada, a primeira é k = 0), filtro
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item nome
+	\item idade
+	\item crm
+	\item sexo
+	\item numero\_do\_telefone\_funcionarios
+\end{itemize}
+
+\begin{verbatim}
+	lista_de_medicos(0,"")
+\end{verbatim}
+
+\subsection{dados\_funcionarios\_estado\_civil}
+
+
+\textbf{In:} Nada
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item estado\_civil
+	\item quant
+\end{itemize}
+
+\begin{verbatim}
+	call dados_funcionarios_estado_civil()
+\end{verbatim}
+
+\subsection{dados\_funcionarios\_idade}
+
+
+\textbf{In:} k (página desejada, a primeira é k = 0)
+
+\textbf{Out:} media, mediana, desvio padrao
+
+\textbf{Retorno:} Uma tabela com as colunas x e y, para plotar a linha
+
+\begin{verbatim}
+call dados_funcionarios_idade(@media, @mediana, @desvio);
+select @media, @mediana, @desvio from dual;
+\end{verbatim}
+
+
+\subsection{lista\_de\_funcionarios}
+
+\textbf{In:} k (página desejada, a primeira é k = 0), filtro
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item nome
+	\item idade
+	\item sexo
+	\item numero\_do\_telefone
+	\item cpf
+\end{itemize}
+
+\begin{verbatim}
+	lista_de_funcionarios(0,"")
+\end{verbatim}
+
+
+\subsection{dados\_plano\_de\_saude\_quantidade\_cliente}
+
+\textbf{In:} Nada
+
+\textbf{Out:} media, desvio padrão, máximo, minimo
+
+\textbf{Retorno:} três tabelas:
+
+\begin{itemize}
+	\item nomes das especialidades com valores máximo
+	\subitem nome
+	\item nomes das especialidades com valores mínimo
+	\subitem nome
+	\item informações para pseudo histograma
+	\subitem x
+	\subitem y
+\end{itemize}
+
+\begin{verbatim}
+	call dados_plano_de_saude_quantidade_cliente(@media, @desvio, @maximo, @minimo);
+	
+	select @media, @desvio, @maximo, @minimo from dual;
+\end{verbatim}
+
+\subsection{dados\_plano\_de\_saude\_atendimentos\_aceitos}
+
+\textbf{In:} Nada
+
+\textbf{Out:} media, desvio padrão, máximo, minimo
+
+\textbf{Retorno:} três tabelas:
+
+\begin{itemize}
+	\item nomes das especialidades com valores máximo
+	\subitem nome
+	\item nomes das especialidades com valores mínimo
+	\subitem nome
+	\item informações para gráfico de barra
+	\subitem x
+	\subitem y
+\end{itemize}
+
+\begin{verbatim}
+	call dados_plano_de_saude_atendimentos_aceitos(@media, @desvio, @maximo, @minimo);
+	
+	select @media, @desvio, @maximo, @minimo from dual;
+\end{verbatim}
+
+\subsection{dados\_plano\_de\_saude\_quantidade\_de\_medicos}
+
+\textbf{In:} Nada
+
+\textbf{Out:} media, desvio padrão, máximo, minimo
+
+\textbf{Retorno:} três tabelas:
+
+\begin{itemize}
+	\item nomes das especialidades com valores máximo
+	\subitem nome
+	\item nomes das especialidades com valores mínimo
+	\subitem nome
+	\item informações para gráfico de barra
+	\subitem x
+	\subitem y
+\end{itemize}
+
+\begin{verbatim}
+	call dados_plano_de_saude_quantidade_de_medicos(@media, @desvio, @maximo, @minimo);
+	
+	select @media, @desvio, @maximo, @minimo from dual;
+\end{verbatim}
+
+\subsection{dados\_plano\_de\_saude\_vs\_desconto}
+
+\textbf{In:} Nada
+
+\textbf{Out:} media, desvio padrão, máximo, minimo
+
+\textbf{Retorno:} três tabelas:
+
+\begin{itemize}
+	\item nomes das especialidades com valores máximo
+	\subitem nome
+	\item nomes das especialidades com valores mínimo
+	\subitem nome
+	\item informações para gráfico de barra
+	\subitem x
+	\subitem y
+\end{itemize}
+
+\begin{verbatim}
+	call dados_plano_de_saude_vs_desconto(@media, @desvio, @maximo, @minimo);
+	
+	select @media, @desvio, @maximo, @minimo from dual;
+\end{verbatim}
+
+\subsection{lista\_de\_planos}
+
+\textbf{In:} k (página desejada, a primeira é k = 0), filtro
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item nome
+	\item plano\_de\_saude\_id
+\end{itemize}
+
+\begin{verbatim}
+	lista_de_planos(0,"")
+\end{verbatim}
+
+\subsection{obter\_dados\_tratamentos}
+
+\textbf{In:} Nada
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} 2 tabelas:
+
+\begin{itemize}
+	\item quantidade agrupado por ser cronico (pizza)
+	\subitem eh\_cronico
+	\subitem quant
+	
+	\item quantidade agrupado por tipo de tratamento (barra)
+	\subitem nome
+	\subitem quant
+\end{itemize}
+
+\subsection{lista\_de\_tratamentos}
+
+\textbf{In:} k (página desejada, a primeira é k = 0), filtro
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item tratamento\_id
+	\item cliente\_nome
+	\item tipo\_de\_tratamento
+	\item quant\_de\_atendimentos
+\end{itemize}
+
+\begin{verbatim}
+	lista_de_tratamentos(0,"")
+\end{verbatim}
+
+\subsection{obter\_dados\_atendimentos\_realizados}
+\textbf{In:} data de inicio, data do fim
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item valor\_recebido\_media
+	\item valor\_recebido\_desvio
+	\item valor\_recebido\_soma
+	\item valor\_arrecadado\_media
+	\item valor\_arrecadado\_desvio
+	\item valor\_arrecadado\_total
+	\item quantidade
+\end{itemize}
+
+\begin{verbatim}
+	call obter_dados_atendimentos_realizados("2021-5-1", "2023-06-19");
+\end{verbatim}
+
+\subsection{lista\_de\_atendimentos\_realizados}
+
+\textbf{In:} k (página desejada, a primeira é k = 0), filtro, data de inicio, data do fim
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item nome\_cliente
+	\item tipo\_de\_atendimento
+	\item nome\_medico
+	\item horario\_inicio\_real
+	\item atendimento\_id
+\end{itemize}
+
+\begin{verbatim}
+	call lista_de_atendimentos_realizados(1, "be", "2021-5-1", "2023-06-19")
+\end{verbatim}
+
+\subsection{obter\_dados\_pessoais}
+
+\textbf{In:} cpf
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item cpf
+	\item nome
+	\item estado\_civil
+	\item sexo
+	\item data\_de\_nascimento
+	\item idade
+	\item cep
+	\item estado
+	\item cidade
+	\item bairro
+	\item logradouro
+	\item numero
+	\item complemento
+	\item email
+	\item numero\_do\_telefone
+\end{itemize}
+
+\begin{verbatim}
+call obter_dados_pessoais(329284240)
+\end{verbatim}
+
+
+\subsection{atendimentos\_realizados\_por\_cliente\_dados}
+
+\textbf{In:} crm
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item quant
+	\item data\_ultima\_consulta
+\end{itemize}
+
+\begin{verbatim}
+call atendimentos_realizados_por_cliente_dados(50545756421);
+\end{verbatim}
+
+\subsection{atendimentos\_realizados\_por\_um\_cliente\_lista}
+
+\textbf{In:} k (página desejada, a primeira é k = 0), cpf, filtro
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item cpf
+	\item nome\_medico
+	\item sala
+	\item horario\_inicio\_real
+	\item atendimento\_id
+\end{itemize}
+
+\begin{verbatim}
+call atendimentos_realizados_por_um_cliente_lista(0,50545756421, "")
+\end{verbatim}
+
+\subsection{atendimentos\_agendados\_por\_cliente\_dados}
+
+\textbf{In:} crm
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item quant
+	\item data\_proxima\_consulta
+\end{itemize}
+
+\begin{verbatim}
+	call atendimentos_agendados_por_cliente_dados(50545756421);
+\end{verbatim}
+
+\subsection{atendimentos\_agendados\_por\_um\_cliente\_lista}
+
+\textbf{In:} k (página desejada, a primeira é k = 0), cpf, filtro
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item cpf
+	\item nome\_medico
+	\item sala
+	\item horario\_agendado
+	\item atendimento\_id
+\end{itemize}
+
+\begin{verbatim}
+	call atendimentos_agendados_por_um_cliente_lista(0,50545756421, "")
+\end{verbatim}
+
+\subsection{tratamentos\_por\_um\_cliente\_lista}
+
+\textbf{In:} k (página desejada, a primeira é k = 0), cpf
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item nome
+	\item quant\_consultas
+	\item tratamento\_id
+\end{itemize}
+
+\begin{verbatim}
+	call atendimentos_agendados_por_um_cliente_lista(0,50545756421, "")
+\end{verbatim}
+
+\subsection{planos\_de\_saude\_de\_um\_cliente\_lista}
+
+\textbf{In:} k (página desejada, a primeira é k = 0), cpf
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item nome
+	\item quant\_realizadas
+	\item quant\_agendados
+\end{itemize}
+
+\begin{verbatim}
+	call planos_de_saude_de_um_cliente_lista(0,50545756421)
+\end{verbatim}
+
+
+\subsection{planos\_de\_saude\_de\_um\_cliente\_lista}
+
+\textbf{In:} Nada
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item nome
+\end{itemize}
+
+\begin{verbatim}
+	call lista_de_doencas_pre_existentes(50545756421)
+\end{verbatim}
+
+
+\subsection{depedentes\_de\_um\_funcionario}
+
+\textbf{In:} k (página desejada, a primeira é k = 0), cpf
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item nome
+	\item cpf
+\end{itemize}
+
+\begin{verbatim}
+	call depedentes_de_um_funcionario(0,50545756421)
+\end{verbatim}
+
+\subsection{informacoes\_escolares\_de\_um\_medico}
+
+\textbf{In:} k (página desejada, a primeira é k = 0), cpf
+
+\textbf{Out:} Nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item escola\_de\_origem
+	\item tipo\_de\_residencia\_medica
+\end{itemize}
+
+\begin{verbatim}
+	call informacoes_escolares_de_um_medico(3)
+\end{verbatim}
+
+\subsection{especialidades\_de\_um\_medico}
+
+\textbf{In:} k (página desejada, a primeira é k = 0), crm
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item nome
+\end{itemize}
+
+\begin{verbatim}
+	call informacoes_escolares_de_um_medico(3)
+\end{verbatim}
+
+\subsection{planos\_de\_saude\_de\_um\_medico}
+
+\textbf{In:} k (página desejada, a primeira é k = 0), crm
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item nome
+\end{itemize}
+
+\begin{verbatim}
+	call planos_de_saude_de_um_medico(3)
+\end{verbatim}
+
+\subsection{atendimentos\_realizados\_por\_medico\_dados}
+
+\textbf{In:} crm
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item quant
+	\item data\_ultima\_consulta
+\end{itemize}
+
+\begin{verbatim}
+	call atendimentos_realizados_por_medico_dados(3)
+\end{verbatim}
+
+
+\subsection{atendimentos\_realizados\_por\_um\_medico\_lista}
+
+\textbf{In:} k, crm, filtro
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item cpf
+	\item nome\_cliente
+	\item sala
+	\item horario\_inicio\_real
+	\item valor\_recebido\_por\_medico
+	\item atendimento\_id
+\end{itemize}
+
+\begin{verbatim}
+call atendimentos_realizados_por_um_medico_lista(0, 48,"")
+\end{verbatim}
+
+\subsection{atendimentos\_agendados\_por\_medico\_dados}
+
+\textbf{In:} crm
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item quant
+	\item data\_proxima\_consulta
+\end{itemize}
+
+\begin{verbatim}
+	call atendimentos_realizados_por_um_medico_lista(0, 48,"")
+\end{verbatim}
+
+
+\subsection{atendimentos\_agendados\_por\_um\_medico\_lista}
+
+\textbf{In:} k, crm, filtro
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+	\item cpf
+	\item nome\_cliente
+	\item sala
+	\item horario\_agendado
+	\item valor\_recebido\_por\_medico
+	\item atendimento\_id
+\end{itemize}
+
+\begin{verbatim}
+	call atendimentos_agendados_por_um_medico_lista(0, 48,"")
+\end{verbatim}
+
+\subsection{dados\_sobre\_atendimento\_realizado}
+
+\textbf{In:} atendimento\_id
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} Uma tabela com as colunas:
+
+\begin{itemize}
+\item horario\_agendado
+\item horario\_inicio\_real
+\item horario\_fim\_real
+\item nome\_cliente
+\item nome\_medico
+\item valor
+\item comissao\_da\_clinica
+\item valor\_recebidos\_por\_medico
+\item data\_de\_recebimento
+\item data\_do\_reparsse\_ao\_medico
+\item tipo\_de\_atendimentos
+\end{itemize}
+
+\begin{verbatim}
+select obter_n_atendimentos_agendados _por_um_medico(3) from dual;
+\end{verbatim}
+
+
+\subsection{cadastrar\_pessoa}
+
+\textbf{In:} um json (olhar exemplo)
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} nada
+
+\begin{verbatim}
+call cadastrar_pessoa('{
+	"CPF" : 84958640029,
+	"nome" : "insira um nome verdadeiro aqui",
+	"estado_civil" : "Solteiro(a)",
+	"sexo" : 0,
+	"data_de_nascimento" : "1939-01-05",
+	"numero_do_telefone" : " 32606-8312",
+	"cep" : "25721705",
+	"estado" : "MT",
+	"cidade" : "Santo Antônio do Içá",
+	"bairro" : "Cangaíba",
+	"logradouro" : "Rua José Paulino",
+	"complemento" : 216,
+	"numero" : 81,
+	"email" : "davikristiansen@gmail.com"
+}');
+\end{verbatim}
+
+\subsection{obter\_funcoes}
+
+\textbf{In:} nada
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} uma tabela:
+
+\begin{itemize}
+	\item funcao\_id
+	\item nome
+\end{itemize}
+
+\subsection{cadastrar\_funcionario}
+\textbf{In:} um json (olhar exemplo)
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} nada
+
+\begin{verbatim}
+	call cadastrar_funcionario('{
+		"salario_bruto" : 127745,
+		"CPF" : 62992881594,
+		"funcao_id" : 4,
+		"depedentes": [
+			26115330408,
+			38939575024,
+			92289773450
+		]}');
+\end{verbatim}
+
+\subsection{cadastrar\_medico}
+\textbf{In:} um json (olhar exemplo)
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} nada
+
+\begin{verbatim}
+call cadastrar_medico('{
+	"CRM" : 60,
+	"escola_de_origem" : "Universidade Federal De Minas Gerais (UFMG)",
+	"tipo_de_residencia_medica_id" : 9,
+	"especialidades": [1, 4, 10],
+	"planos_de_saude": [1, 6, 10]
+}');
+\end{verbatim}
+
+\subsection{medico\_funcionario}
+\textbf{In:} crm, cpf
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} nada
+
+\begin{verbatim}
+	call medico_funcionario();
+\end{verbatim}
+
+\subsection{cadastrar\_medico\_prestador\_de\_servico}
+\textbf{In:} crm, cpf
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} nada
+
+\begin{verbatim}
+	call cadastrar_medico_prestador_de_servico();
+\end{verbatim}
+
+\subsection{obter\_tipos\_de\_residencia\_medica}
+
+\textbf{In:} nada
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} uma tabela:
+
+\begin{itemize}
+	\item tipo\_de\_residencia\_medica\_id
+	\item nome
+\end{itemize}
+
+\begin{verbatim}
+call obter_tipos_de_residencia_medica();
+\end{verbatim}
+
+\subsection{obter\_especialidades}
+
+\textbf{In:} nada
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} uma tabela:
+
+\begin{itemize}
+	\item especialidade\_id
+	\item nome
+\end{itemize}
+
+\begin{verbatim}
+call obter_especialidades();
+\end{verbatim}
+
+\subsection{obter\_plano\_de\_saude}
+
+\textbf{In:} nada
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} uma tabela:
+
+\begin{verbatim}
+call obter_plano_de_saude
+\end{verbatim}
+
+\begin{itemize}
+	\item plano\_de\_saude\_id
+	\item nome
+\end{itemize}
+
+\subsection{obter\_doencas}
+
+\textbf{In:} nada
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} uma tabela:
+
+\begin{itemize}
+	\item doenca\_id
+	\item nome
+\end{itemize}
+
+\begin{verbatim}
+\call obter_doencas
+\end{verbatim}
+
+\subsection{cadastrar\_cliente}
+\textbf{In:} um json (olhar exemplo)
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} nada
+
+\begin{verbatim}
+	call cadastrar_cliente('{
+		"CPF" : 84958640029,
+		"doencas_pre_existentes": [1, 4, 6],
+		"planos_de_saude": [1, 6, 10]
+	}');
+\end{verbatim}
+
+\subsection{obter\_lista\_completa\_tratamentos\_do\_cliente}
+\textbf{In:} cpf
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} tabela
+
+\begin{itemize}
+	\item nome
+\end{itemize}
+
+\subsection{obter\_tipos\_de\_atendimento}
+\textbf{In:} nada
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} tabela
+
+\begin{itemize}
+	\item nome
+\end{itemize}
+
+\subsection{obter\_planos\_de\_saude\_validos}
+\textbf{In:} cpf, tipo\_de\_atendimento\_id
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} tabela
+
+\begin{itemize}
+	\item nome
+\end{itemize}
+
+\subsection{obter\_medicos\_validos}
+\textbf{In:} plano\_de\_saude\_id, tipo\_de\_atendimento\_id
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} tabela
+
+\begin{itemize}
+	\item nome
+\end{itemize}
+
+\subsection{obter\_tipos\_de\_tratamento}
+
+\textbf{In:} nada
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} uma tabela:
+
+\begin{itemize}
+	\item nome
+\end{itemize}
+
+\subsection{agendar\_atendimento}
+
+\textbf{In:} um json (veja o exemplo)
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} nada
+
+\begin{verbatim}
+call agendar_atendimento('{
+	"sala" : "A3",
+	"horario_agendado" : "2020-06-19 08:30:00",
+	"estado" : 0,
+	"crm" : 2,
+	"plano_de_saude_id" : 12,
+	"tipo_de_atendimento_id" : 16,
+	"tratamento_id" : 1
+}');
+\end{verbatim}
+
+\subsection{criar\_tratamento}
+
+\textbf{In:} tipo\_de\_tratamento, cpf
+
+\textbf{Out:} nada
+
+\textbf{Retorno:} nada
